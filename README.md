@@ -32,7 +32,7 @@ Develop an interoperable PWA for media playback, which includes a catalogue and 
 * Playback of stored content (offline)
 * Integration into existing HTML5 player (shaka, dash.js)
 * UI adjustments (e.g. offline app, download page, download button etc.)
-  * Cache offline app resources (portal + player
+  * Cache offline app resources (portal + player)
 
 ## Getting started
 
