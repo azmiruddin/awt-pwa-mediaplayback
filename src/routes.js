@@ -2,8 +2,9 @@ import IndexView from './views/Index';
 import HomeView from './views/Home';
 import DownloadView from './views/Downloads';
 import PlaybackView from './views/VideoPlayback';
-import HowToView from './views/HowTo';
 import OfflinePlayback from './views/OfflinePlayback';
+import AboutUs from './views/AboutUs';
+import ContactUs from './views/ContactUs';
 
 // eslint-disable-next-line
 export const publicRoutes = [
@@ -23,9 +24,14 @@ export const publicRoutes = [
     page: DownloadView,
   },
   {
-    path: '/howto',
+    path: '/aboutus',
     exact: true,
-    page: HowToView,
+    page: AboutUs,
+  },
+  {
+    path: '/contactus',
+    exact: true,
+    page: ContactUs
   },
   {
     path: '/:id',

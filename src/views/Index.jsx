@@ -1,13 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
-import {
-  Container, Row, Col, Button, Jumbotron, Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle} from 'reactstrap';
-import { MainHeadline, SecondaryHeadline } from '../components/Headline';
-import videoSources from '../videoSources';
-import VideoItem from '../components/VideoFeed/VideoItem';
+import {Container} from 'reactstrap';
 import ViewLayout from '../components/ViewLayout';
-import { Offline, Online } from 'react-detect-offline';
 
 
 

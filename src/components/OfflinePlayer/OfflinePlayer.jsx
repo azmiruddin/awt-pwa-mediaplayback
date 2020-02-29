@@ -4,7 +4,6 @@ import shaka from 'shaka-player';
 import { Button } from 'reactstrap';
 import { MainHeadline } from '../Headline';
 import { sizes } from '../../utils/styleUtils';
-import {createNotification} from '../../managers/NotificationManager';
 
 const PrimaryButton = styled(Button)`
   background-color: #1f3651;

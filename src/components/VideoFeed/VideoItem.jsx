@@ -1,9 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
 import { withRouter } from 'react-router-dom';
-import { Container, Row, Card, CardImg, Button} from 'reactstrap';
+import { Row, CardImg, Button} from 'reactstrap';
 import { string, object } from 'prop-types';
-import { media } from '../../utils/styleUtils';
 import thumbnail from '../../assets/pictures/icon@256.png';
 
 export const VideoItem = ({ title, description, id, history,resolution }) => (

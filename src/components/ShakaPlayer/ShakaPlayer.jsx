@@ -19,6 +19,7 @@ import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 import { languageCodeMap } from '../../utils/languageCodeMap';
 import { TrackSelectionDialog } from '../Dialogs';
+import {uniqBy, prop} from 'ramda';
 
 const StyledProgressBar = styled(CircularProgressbar)`
   width: 50px !important;
@@ -74,9 +75,11 @@ const BandwidthLabel = styled.p`
 
 
 function sortVariantTracksByWidth(variantTracks) {
-  return variantTracks.sort((trackA, trackB) => {
+  const sortedTracks = variantTracks.sort((trackA, trackB) => {
     return trackA.width - trackB.width;
-  })
+  });
+  const uniqueTracks = uniqBy(prop('width'),sortedTracks)
+  return uniqueTracks;
 }
 
 export class ShakaPlayer extends Component {
@@ -162,7 +165,6 @@ export class ShakaPlayer extends Component {
 
   initPlayer() {
     const player = new shaka.Player(this.videoRef.current);
-    console.log('player', player);
     // attach player to the global window
     window.player = player;
 
@@ -192,7 +194,6 @@ export class ShakaPlayer extends Component {
   }
 
   handleTrackChange = event => {
-    console.log(event.target.value);
     this.setState({
       ...this.state,
       selectedTrackLanguage: event.target.value,
@@ -201,7 +202,6 @@ export class ShakaPlayer extends Component {
   };
 
   handleTextTrackChange = event => {
-    console.log(event.target.value);
     this.setState({
       ...this.state,
       selectedTextTrackLanguage: event.target.value,
@@ -270,7 +270,6 @@ export class ShakaPlayer extends Component {
   }
 
   openDownloadDialog() {
-    console.log('in function');
     this.setState({
       ...this.state,
       openDialog: true,
@@ -328,7 +327,6 @@ export class ShakaPlayer extends Component {
     } = this.state;
     return (
       <React.Fragment>
-              {/* // <div style={{marginLeft:"25%"}}> */}
       <div >
 
         <TrackSelectionDialog 

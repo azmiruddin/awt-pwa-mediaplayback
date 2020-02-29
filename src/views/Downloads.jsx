@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Container } from 'reactstrap';
 import ViewLayout from '../components/ViewLayout';
 import OfflineVideoFeed from '../components/OfflineVideoFeed';
-import { MainHeadline, SecondaryHeadline } from '../components/Headline';
+import { MainHeadline } from '../components/Headline';
 
 const HeadlineWrapper = styled.div`
   text-align: center;

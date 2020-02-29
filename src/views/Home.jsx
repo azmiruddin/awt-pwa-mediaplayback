@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Container, Row, Col,CardGroup, Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle,Button} from 'reactstrap';
+import {Container, CardGroup} from 'reactstrap';
 import { MainHeadline } from '../components/Headline/MainHeadline';
 import { SecondaryHeadline } from '../components/Headline/SecondaryHeadline';
 import videoSources from '../videoSources';

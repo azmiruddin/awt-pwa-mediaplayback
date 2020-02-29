@@ -5,10 +5,7 @@ import Header from '../Header';
 import Footer from '../Footer';
 import * as ReactNotifications from 'react-notifications'
 import 'react-notifications/lib/notifications.css';
-// import '../../styles/styles.css';
 import '../../styles/css/animate.css';
-
-
 
 const LayoutWrapper = styled.div`
   display: flex;

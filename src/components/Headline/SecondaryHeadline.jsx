@@ -5,7 +5,6 @@ const StyledSecondaryHeadline = styled.h2`
   padding-bottom: 10px;
   color: #b0bec5;
 `;
-
 export const SecondaryHeadline = ({ children }) => (
   <StyledSecondaryHeadline>{children}</StyledSecondaryHeadline>
 );

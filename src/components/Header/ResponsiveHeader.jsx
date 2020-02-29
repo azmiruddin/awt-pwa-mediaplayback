@@ -1,21 +1,6 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
 import { Offline, Online } from 'react-detect-offline';
 import {createNotification} from '../../managers/NotificationManager';
-// import { SideBar } from "./SideBar";
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-} from 'reactstrap';
-
-const StyledNavbar = styled(Navbar)`
-  background-color: maroon !important;
-`;
 
 export class Header extends Component {
   constructor(props) {
@@ -26,6 +11,7 @@ export class Header extends Component {
       isOpen: false,
     };
   }
+  
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen,
@@ -82,21 +68,14 @@ export class Header extends Component {
 			<div class="prs_navi_right_main_wrapper">
       
 				<div class="prs_slidebar_wrapper">
-					<button class="second-nav-toggler" type="button">
+					<button onClick={this.toggle} class="second-nav-toggler" type="button">
 						<img src="images/header/bars.png" alt="bar_png"/>
 					</button>
 				</div>
 				<div class="prs_top_login_btn_wrapper">
        
 					<div class="prs_animate_btn1">
-            
-                
-
-
-						{/* <ul>
-							<li><a href="#" class="button button--tamaya" data-text="sign up" data-toggle="modal" data-target="#myModal"><span>sign up</span></a>
-							</li>
-						</ul> */}
+    
 					</div>
 				</div>
 				
@@ -111,64 +90,28 @@ export class Header extends Component {
 						<a href="#" class="manu-close">X</a>
 					</div>
 					<ul class="mobile-list-nav">
-						<li><a href="/home">PLAYLIST</a>
+						<li>
+              <a href="/home">PLAYLIST</a>
 						</li>
-						<li><a href="/downloads">MY DOWNLOADS</a>
+						<li>
+              <a href="/downloads">MY DOWNLOADS</a>
 						</li>
-						<li><a href="/howto">HOW TO</a>
+						<li>
+              <a href="/aboutus">ABOUT US</a>
 						</li>
-						{/* <li><a href="gallery.html">GALLERY</a>
+            <li>
+              <a href="/contactus">CONTACT US</a>
 						</li>
-						<li><a href="blog_single.html">BLOG</a>
-						</li>
-						<li><a href="contact.html">CONTACT</a>
-						</li> */}
-					</ul>
-				
-					
+					</ul>			
 					<div class="prs_top_login_btn_wrapper prs_slidebar_searchbar_btn_wrapper">
 						<div class="prs_animate_btn1">
-							{/* <ul>
-								<li><a href="#" class="button button--tamaya" data-text="sign up" data-toggle="modal" data-target="#myModal"><span>sign up</span></a>
-								</li>
-							</ul> */}
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
     </div>
-        
-        /* <StyledNavbar color="dark" dark expand="md">
-          <NavbarBrand href="/">AWT PWA </NavbarBrand>
-          <span style={{marginLeft:"56%",color: "white"}}>Connection Status: 
-          <Offline polling={{ enabled: true, interval: 500 }}>
-            <span className="color-red"><strong> OFFLINE</strong></span>
-          </Offline>
-          <Online polling={{ enabled: true, interval: 500 }}>
-            <span className="color-green"> <strong>ONLINE</strong></span>
-          </Online>
-          </span>
-          <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <Online polling={{ enabled: true, interval: 500 }}>
-                <NavItem>
-                  <NavLink href="/home">PLAYLIST</NavLink>
-                </NavItem>
-              </Online>
-              <NavItem>
-                <NavLink href="/downloads">MY DOWNLOADS</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/howto">HOW TO</NavLink>
-              </NavItem>
-            </Nav>
-          </Collapse>
-        </StyledNavbar> */
-        /* <SideBar> */
-          /* </SideBar> */
-      // </div>
+  
     );
   }
 }
